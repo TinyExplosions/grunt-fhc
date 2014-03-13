@@ -1,7 +1,7 @@
 {
   "name": "grunt-fhc",
   "description": "Deploy your FeedHenry apps from Grunt.",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "homepage": "https://github.com/TinyExplosions/grunt-fhc",
   "author": {
     "name": "Al Graham",
@@ -31,7 +31,7 @@
     "fh-fhc": "*"
   },
   "peerDependencies": {
-    "grunt": "0.4.0"
+    "grunt": "~0.4.0"
   },
   "keywords": [
     "gruntplugin",
