@@ -1,6 +1,6 @@
 # grunt-fhc
 
-> Interect with your FeedHenry apps from Grunt.
+> Interact with your FeedHenry apps from Grunt.
 
 ## Getting Started
 This plugin requires Grunt `~0.4.3`
