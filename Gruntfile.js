@@ -15,8 +15,7 @@ module.exports = function(grunt) {
     jshint: {
       all: [
         'Gruntfile.js',
-        'tasks/*.js',
-        '<%= nodeunit.tests %>',
+        'tasks/*.js'
       ],
       options: {
         jshintrc: '.jshintrc',
@@ -26,7 +25,7 @@ module.exports = function(grunt) {
     fhctarget: {
         options: {
           username: "teddy",
-          password: "bear"
+          password: "bear",
           domain: "https://feedhenry.com",
 
         },
@@ -51,16 +50,58 @@ module.exports = function(grunt) {
       },
     },
 
+    fhclocal: {
+      task: {
+        options: {
+          appid: "cCU5wU-ruIMAuyM2CZMYvv95"
+        }
+      },
+    },
+
+    fhcstart: {
+      task: {
+        options: {
+          appid: "cCU5wU-ruIMAuyM2CZMYvv95"
+        }
+      },
+    },
+
+    fhcstop: {
+      task: {
+        options: {
+          appid: "cCU5wU-ruIMAuyM2CZMYvv95"
+        }
+      },
+    },
+
+    fhcrestart: {
+      task: {
+        options: {
+          appid: "cCU5wU-ruIMAuyM2CZMYvv95"
+        }
+      },
+    },
+
+
+    fhcbuild: {
+      task: {
+        options: {
+          appid: "cCU5wU-ruIMAuyM2CZMYvv95",
+          destination: "iphone"
+        }
+      },
+    },
+
   });
 
   // Actually load this plugin's task(s).
   grunt.loadTasks('tasks');
 
-  // These plugins provide necessary tasks.
+  // These plugins provide necessary tasks.x
   grunt.loadNpmTasks('grunt-contrib-jshint');
 
   // By default, lint and run all tests.
   // grunt.registerTask('default', ['jshint', 'test']);
-  grunt.registerTask('default', ['jshint', 'fhctarget', 'fhcpull', 'fhcstage']);
+  grunt.registerTask('default', ['jshint', 'fhctarget', 'fhcpull', 'fhcstage', 'fhclocal', 'fhcrestart', 'fhcbuild']);
 
 };
